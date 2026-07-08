@@ -1,127 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HZCX - Professional Manufacturer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Grace Songjin - Luxury Silk Brocade Accessories</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { color: #333; line-height: 1.6; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        /* 导航栏 */
-        header { background: #1a2a3a; padding: 20px 0; }
-        header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .logo { color: #fff; font-size: 28px; font-weight: bold; letter-spacing: 2px; }
-        .logo span { color: #f0b400; }
-        nav a { color: #ccc; margin-left: 30px; text-decoration: none; transition: 0.3s; }
-        nav a:hover { color: #f0b400; }
+        /* ===== 全局重置 & 字体 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        body {
+            background: #faf7f2;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-        /* 横幅 Hero */
-        .hero { background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%); color: #fff; padding: 100px 0; text-align: center; }
-        .hero h1 { font-size: 48px; margin-bottom: 20px; }
-        .hero h1 span { color: #f0b400; }
-        .hero p { font-size: 20px; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
-        .btn { background: #f0b400; color: #1a2a3a; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: bold; display: inline-block; transition: 0.3s; }
-        .btn:hover { background: #ffc107; transform: scale(1.05); }
+        /* ===== 顶部导航 ===== */
+        header {
+            background: #1a1410;
+            padding: 18px 0;
+            border-bottom: 3px solid #b8860b;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            color: #f5e6d3;
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+        .logo span {
+            color: #d4a847;
+        }
+        nav a {
+            color: #ccc;
+            margin-left: 32px;
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #d4a847;
+        }
 
-        /* 通用标题 */
-        .section-title { text-align: center; font-size: 32px; margin-bottom: 15px; }
-        .section-sub { text-align: center; color: #666; margin-bottom: 50px; }
-        section { padding: 80px 0; }
+        /* ===== 主横幅 Hero ===== */
+        .hero {
+            background: linear-gradient(135deg, #1a1410 0%, #3d2b1f 100%);
+            color: #f5e6d3;
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        .hero::after {
+            content: "✦ 宋锦 ✦";
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            font-size: 14px;
+            color: rgba(212, 168, 71, 0.3);
+            letter-spacing: 6px;
+        }
+        .hero h1 {
+            font-size: 44px;
+            font-weight: normal;
+            letter-spacing: 6px;
+            margin-bottom: 12px;
+        }
+        .hero h1 span {
+            color: #d4a847;
+        }
+        .hero .subtitle {
+            font-size: 18px;
+            color: #c9b6a4;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 640px;
+            margin: 20px auto 32px;
+            color: #ddd;
+            line-height: 1.8;
+        }
+        .btn {
+            display: inline-block;
+            background: #d4a847;
+            color: #1a1410;
+            padding: 14px 48px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            border: none;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #e8c06a;
+            transform: scale(1.03);
+        }
 
-        /* 优势图标 */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
-        .feature-item { text-align: center; padding: 20px; }
-        .feature-item h3 { margin: 15px 0 10px; color: #1a2a3a; }
+        /* ===== 通用标题 ===== */
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: normal;
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+            color: #1a1410;
+        }
+        .section-sub {
+            text-align: center;
+            color: #8a7a6a;
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin-bottom: 48px;
+        }
+        section {
+            padding: 72px 0;
+        }
 
-        /* 产品展示 */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .product-card { background: #f9f9f9; padding: 20px; border-radius: 10px; text-align: center; transition: 0.3s; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .product-card .img-placeholder { background: #ddd; height: 200px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #888; margin-bottom: 15px; }
+        /* ===== 四大优势 ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .feature-item {
+            text-align: center;
+            padding: 16px;
+            background: #fffcf8;
+            border-radius: 12px;
+            border: 1px solid #eee7df;
+        }
+        .feature-item .icon {
+            font-size: 32px;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .feature-item h3 {
+            font-size: 17px;
+            color: #1a1410;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .feature-item p {
+            font-size: 14px;
+            color: #7a6a5a;
+        }
 
-        /* 联系 CTA */
-        .cta { background: #1a2a3a; color: #fff; text-align: center; }
-        .cta h2 { font-size: 36px; margin-bottom: 15px; }
-        .cta a { color: #f0b400; text-decoration: none; font-size: 24px; font-weight: bold; }
-        .cta a:hover { text-decoration: underline; }
+        /* ===== 产品展示（重点！） ===== */
+        #products {
+            background: #f5efe8;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 32px;
+        }
+        .product-card {
+            background: #fffcf8;
+            border-radius: 16px;
+            padding: 20px 20px 24px;
+            text-align: center;
+            transition: 0.3s;
+            border: 1px solid #e8ddd2;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(26, 20, 16, 0.10);
+        }
+        .product-card .img-placeholder {
+            background: #e8ddd2;
+            height: 200px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 52px;
+            color: #8a7a6a;
+            margin-bottom: 14px;
+            background-image: repeating-linear-gradient(45deg, #ddd0c4 0px, #ddd0c4 2px, #e8ddd2 2px, #e8ddd2 8px);
+        }
+        .product-card h4 {
+            font-size: 18px;
+            color: #1a1410;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .product-card .price {
+            color: #b8860b;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .product-card p {
+            font-size: 14px;
+            color: #7a6a5a;
+            margin-top: 4px;
+        }
 
-        footer { background: #111; color: #888; text-align: center; padding: 30px 0; font-size: 14px; }
+        /* ===== 文化故事 About ===== */
+        #about {
+            background: #fffcf8;
+        }
+        #about .story {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 17px;
+            color: #4a3a2a;
+            line-height: 2;
+        }
+        #about .story .highlight {
+            color: #b8860b;
+            font-weight: bold;
+        }
+
+        /* ===== 联系 CTA ===== */
+        .cta {
+            background: #1a1410;
+            color: #f5e6d3;
+            text-align: center;
+            padding: 72px 0;
+        }
+        .cta h2 {
+            font-size: 32px;
+            font-weight: normal;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+        .cta p {
+            color: #c9b6a4;
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+        .cta a {
+            color: #d4a847;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .cta a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== 页脚 ===== */
+        footer {
+            background: #0f0c09;
+            color: #6a5a4a;
+            text-align: center;
+            padding: 28px 0;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-top: 1px solid #2a221c;
+        }
+        footer span {
+            color: #b8860b;
+        }
+
+        /* ===== 移动端适配 ===== */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 28px;
+                letter-spacing: 3px;
+            }
+            header .container {
+                flex-direction: column;
+                gap: 12px;
+            }
+            nav a {
+                margin: 0 12px;
+                font-size: 13px;
+            }
+            .section-title {
+                font-size: 24px;
+            }
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- 导航栏 -->
+
+    <!-- ===== 导航栏 ===== -->
     <header>
         <div class="container">
-            <div class="logo">Your<span>Brand</span></div>
+            <div class="logo">GRACE<span>·宋锦</span></div>
             <nav>
                 <a href=" ">Home</a >
-                <a href="#products">Products</a >
-                <a href="#about">About</a >
+                <a href="#products">Collection</a >
+                <a href="#about">Heritage</a >
                 <a href="#contact">Contact</a >
             </nav>
         </div>
     </header>
 
-    <!-- 横幅 -->
+    <!-- ===== 主横幅 ===== -->
     <section class="hero">
         <div class="container">
-            <h1>Reliable <span>Manufacturing</span> Partner</h1>
-            <p>Premium quality products with competitive factory prices. Your trusted supplier for global markets.</p >
-            <a href="#contact" class="btn">Get Free Quote →</a >
+            <div class="subtitle">✦ Songjin · 锦绣之冠 ✦</div>
+            <h1>Wearable <span>Heritage</span></h1>
+            <p>
+                Luxurious silk brocade accessories — handcrafted from century-old weaving techniques. 
+                Each piece tells a story of Chinese artistry.
+            </p >
+            <a href="#contact" class="btn">Inquire Now</a >
         </div>
     </section>
 
-    <!-- 核心优势 -->
+    <!-- ===== 核心优势 ===== -->
     <section>
         <div class="container">
-            <h2 class="section-title">Why Choose Us</h2>
-            <p class="section-sub">We deliver excellence in every detail</p >
+            <h2 class="section-title">Why Songjin</h2>
+            <p class="section-sub">The essence of Oriental elegance</p >
             <div class="features-grid">
-                <div class="feature-item"><h3>✅ Factory Direct</h3><p>No middlemen, lowest factory prices.</p ></div>
-                <div class="feature-item"><h3>✅ Certified Quality</h3><p>ISO & CE standards with strict QC.</p ></div>
-                <div class="feature-item"><h3>✅ Fast Shipping</h3><p>Reliable logistics & on-time delivery.</p ></div>
-                <div class="feature-item"><h3>✅ 24/7 Support</h3><p>Dedicated service team for you.</p ></div>
+                <div class="feature-item">
+                    <span class="icon">🧵</span>
+                    <h3>100% Natural Silk</h3>
+                    <p>Pure mulberry silk, plant-dyed</p >
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🏛️</span>
+                    <h3>Intangible Heritage</h3>
+                    <p>Techniques from the Song Dynasty</p >
+                </div>
+                <div class="feature-item">
+                    <span class="icon">✨</span>
+                    <h3>Lightweight & Daily</h3>
+                    <p>Designed for modern elegance</p >
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🎁</span>
+                    <h3>Gift-Ready</h3>
+                    <p>Perfect for cultural gifting</p >
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 产品展示 -->
-    <section id="products" style="background:#f4f6f9;">
+    <!-- ===== 产品展示 ===== -->
+    <section id="products">
         <div class="container">
-            <h2 class="section-title">Our Products</h2>
-            <p class="section-sub">High-quality solutions for your business needs</p >
+            <h2 class="section-title">Our Collection</h2>
+            <p class="section-sub">Lightweight accessories · timeless beauty</p >
             <div class="product-grid">
-                <div class="product-card"><div class="img-placeholder">📦 Product A</div><h4>Product Model X1</h4><p>Durable & cost-effective</p ></div>
-                <div class="product-card"><div class="img-placeholder">📦 Product B</div><h4>Product Model X2</h4><p>Advanced technology design</p ></div>
-                <div class="product-card"><div class="img-placeholder">📦 Product C</div><h4>Product Model X3</h4><p>Customized options available</p ></div>
+
+                <!-- 产品 1 -->
+                <div class="product-card">
+                    <div class="img-placeholder">🌸</div>
+                    <h4>Silk Brocade Hair Clip</h4>
+                    <p class="price">$28 – $45</p >
+                    <p>Peony pattern · gold trim</p >
+                </div>
+
+                <!-- 产品 2 -->
+                <div class="product-card">
+                    <div class="img-placeholder">🪷</div>
+                    <h4>Lotus Earrings</h4>
+                    <p class="price">$32 – $52</p >
+                    <p>Lightweight · lotus motif</p >
+                </div>
+
+                <!-- 产品 3 -->
+                <div class="product-card">
+                    <div class="img-placeholder">🦋</div>
+                    <h4>Brocade Brooch</h4>
+                    <p class="price">$22 – $38</p >
+                    <p>Butterfly · auspicious symbol</p >
+                </div>
+
+                <!-- 产品 4 -->
+                <div class="product-card">
+                    <div class="img-placeholder">🎐</div>
+                    <h4>Bookmark · Silk Tassel</h4>
+                    <p class="price">$15 – $25</p >
+                    <p>Literary gift · handwoven</p >
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- 关于我们 & 联系 -->
+    <!-- ===== 文化故事 ===== -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <p style="text-align:center; max-width:800px; margin:0 auto 40px; color:#555;">With 10+ years of experience, we specialize in manufacturing high-quality industrial parts. We are committed to innovation and customer satisfaction.</p >
+            <h2 class="section-title">The Heritage</h2>
+            <p class="section-sub">Songjin — the "Crown of Brocades"</p >
+            <div class="story">
+                <p>
+                    Originating in the <span class="highlight">Song Dynasty (960–1279)</span>, 
+                    Songjin is renowned for its <span class="highlight">two-warp, three-weft</span> structure, 
+                    creating a fabric that is <span class="highlight">lustrous, durable, and wrinkle-resistant</span>.
+                </p >
+                <p style="margin-top:16px;">
+                    Each accessory is crafted from <span class="highlight">100% natural mulberry silk</span>, 
+                    dyed with traditional plant-based methods. 
+                    We honor this <span class="highlight">living heritage</span> by bringing it into daily life — 
+                    so you can wear a piece of history.
+                </p >
+            </div>
         </div>
     </section>
 
-    <!-- 联系 CTA -->
+    <!-- ===== 联系 CTA ===== -->
     <section id="contact" class="cta">
         <div class="container">
-            <h2>Ready to Start Your Order?</h2>
-            <p style="margin-bottom:20px;">Contact us today for a quick response within 12 hours.</p >
-            <p>📧 <a href="mailto:postmaster@hzcxchoice.com">postmaster@hzcxchoice.com</a ></p >
-            <p style="margin-top:10px;">📞 +86 137 5817 5860</p >
+            <h2>✨ Inquire for Wholesale</h2>
+            <p>Bulk orders · customization · global shipping</p >
+            <p style="margin-top:20px; font-size:18px;">
+                📧 <a href="mailto:grace@yourcompany.com">grace@yourcompany.com</a >
+            </p >
+            <p style="margin-top:6px; color:#c9b6a4;">
+                📞 +86 138 0000 0000
+            </p >
+            <p style="margin-top:20px; font-size:14px; color:#8a7a6a; letter-spacing:2px;">
+                We reply within 12 hours
+            </p >
         </div>
     </section>
 
+    <!-- ===== 页脚 ===== -->
     <footer>
         <div class="container">
-            <p>© 2026 YourBrand. All rights reserved. | Designed for Global Business</p >
+            <p>© 2026 <span>GRACE·宋锦</span> — All rights reserved. Designed with heritage.</p >
         </div>
     </footer>
+
 </body>
 </html>
